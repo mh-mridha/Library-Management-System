@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>Contact Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  
+<style>
+h2
+{
+	color: blue;
+	text-align: center;
+}
+h1
+{
+	color: blue;
+	text-align: center;
+	font-family: "Sofia", sans-serif;
+	text-shadow: 3px 3px 3px #ababab;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.footer
+{
+ text-align: center;
+ background: black;
+ color: white;
+}
+</style>
+</head>
+
+
+<body>
+<form action="/signed_in_contact_us" method="post">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#">LMS</a>
+			</div>
+			<ul class="nav navbar-nav">
+			  <li><a href="index_signed_in">Home</a></li>
+			  <li><a href="user_avail_books">Avilable Books</a></li>
+			  <li><a href="user_issued_book">Issued Books</a></li>
+			  <li class="active"><a href="signed_in_contact_us">Contact us</a></li>
+			  <li><a href="logout">Log out</a></li>
+			</ul>
+		  </div>
+		</nav>
+
+    <!-- main body -->
+
+    <div class="jumbotron text-center">
+      <h2>We are here to hear you...</h2>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+        <h3>Contact Us</h3>
+            <form action="/action_page.php">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name">
+
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="Email">
+
+                <label for="mobile">Mobile No.</label>
+                <input type="text" id="mobile" name="Mobile">
+        </div>
+
+        <div class="col-sm-4">
+            <hr>
+                <label for="subject">Message</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <input type="submit" value="Submit">
+        </div>
+
+        <div class="col-sm-4">
+          <h3>Get in touch</h3>
+          <div>
+              <a href="#"><img src="/static/facebook.png"></a><br/><hr>
+              <a href="#"><img src="/static/twitter.png"></a><br/><hr>
+              <a href="#"><img src="/static/linkedin-big-logo.png"></a><br/><hr>
+              <a href="#"><img src="/static/youtube.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="footer" align="left">
+    <hr>
+        <footer>
+          <p>&copy; LMS- Library Management System</p>
+        </footer><hr>
+    </div>
+</form>
+
+</body>
+</html>

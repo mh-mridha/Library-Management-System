@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Library Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+<style>
+h2
+{
+	color: blue;
+	text-align: center;
+}
+
+.footer
+{
+ text-align: center;
+ background: black;
+ color: white;
+}
+</style>
+</head>
+
+
+<body>
+<!-- navbar -->
+    <form action="/index" method="post">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">LMS</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index">Home</a></li>
+              <li><a href="sign_up">Sign up</a></li>
+              <li><a href="sign_in">Sign in</a></li>
+              <li><a href="contact_us">Contact us</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- main body -->
+        <div class="jumbotron text-center">
+            <h2>Welcome to</h2>
+            <h2>Library Management System</h2>
+        </div>
+        <hr>
+        <div class="w3-content w3-section" style="max-width:500px">
+			<img class="mySlides" src="/static/admin_theme_1.jpg" style="width:500px">
+			<img class="mySlides" src="/static/admin_theme_2.jpg" style="width:500px ">
+			<img class="mySlides" src="/static/admin_theme_3.jpg" style="width:500px ">
+			<img class="mySlides" src="/static/admin_theme_4_edited.jpg" style="width:500px ">
+		</div>
+        <hr>
+
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}
+			  x[myIndex-1].style.display = "block";
+			  setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
+
+
+      <div class="container" align="center">
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">About Us</button>
+          <div id="demo" class="collapse">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lectus metus. Sed tincidunt posuere
+              turpis, sed faucibus massa egestas ut. Integer ac aliquet risus, in faucibus turpis. Etiam tristique
+              pretium ante vel commodo. Sed et hendrerit elit. Vestibulum at leo purus. Interdum et malesuada fames
+              ac ante ipsum primis in faucibus. Vivamus sed imperdiet ante. Proin pellentesque ullamcorper felis eu
+              rutrum. Curabitur viverra felis efficitur pretium eleifend.</p>
+
+            <p>Sed iaculis pharetra libero eget pretium. Curabitur nisl tellus, efficitur nec eleifend sit amet, rhoncus
+              suscipit nisi. Maecenas feugiat pretium placerat. Orci varius natoque penatibus et magnis dis parturient
+              montes, nascetur ridiculus mus. Pellentesque eget velit in nibh tempor tristique sit amet eget lorem.
+              Phasellus pellentesque lorem id augue semper rhoncus. Nulla lorem ligula, egestas vitae lectus eu,
+              ornare fringilla velit. Sed quis ligula interdum tellus semper gravida non sed dolor. Nunc tempor
+              accumsan odio nec scelerisque. Praesent laoreet maximus dui ullamcorper aliquam.</p>
+
+            <p>Aenean in scelerisque libero. In in varius ante. Nunc eget bibendum tellus, ut lobortis augue. Aliquam
+              magna massa, accumsan at gravida sit amet, commodo quis eros. Suspendisse varius, tortor non elementum
+              cursus, ex felis tempor quam, sed elementum sem risus non libero. Phasellus efficitur tortor id turpis
+              semper, sit amet sagittis justo laoreet. Duis hendrerit dolor at mi ultrices venenatis.</p>
+
+            <p>Nunc pretium sed nisi in sodales. Integer purus eros, maximus vitae nisl eget, lobortis sodales justo.
+              Nulla facilisi. Cras auctor, libero sit amet fermentum vulputate, metus velit lacinia ipsum, vitae
+              ultrices magna erat ac urna. Proin at augue hendrerit neque venenatis semper aliquam eu dolor. Cras eu
+              ipsum orci. Sed gravida felis dui, eu placerat dui dictum at. Aenean blandit ipsum quis nunc lacinia
+              accumsan. Nullam in sapien eget nisl volutpat convallis id quis turpis. Duis augue est, cursus in quam
+              at, venenatis ullamcorper felis. Sed suscipit eros quis est facilisis sagittis. Nunc at pellentesque
+              tortor. Cras fermentum tristique molestie. Sed quis dolor vel enim maximus scelerisque.</p>
+
+            <p>Donec consequat lectus ante, et blandit eros elementum ac. Maecenas id luctus neque, at tempus est. Donec
+              interdum leo et quam condimentum, a ornare nisi placerat. Pellentesque ut tellus gravida, consectetur
+              lacus ac, gravida diam. Aliquam fringilla ornare nunc ut iaculis. Cras sed turpis ut neque suscipit
+              commodo. Sed vulputate nisi id libero congue maximus. Phasellus feugiat mi eget sodales suscipit.
+              Curabitur vehicula scelerisque nisi, non dictum diam finibus non. Cras sodales sed arcu at malesuada.
+              Integer odio nisl, rutrum non justo et, ornare viverra lectus. Sed tempus arcu et ornare viverra.
+              Vivamus eu lacus nec risus fringilla bibendum. Vestibulum iaculis lectus ac ultrices efficitur.
+              Curabitur non sem aliquam, lobortis neque quis, laoreet ex.</p>
+          </div>
+        </div>
+        <!--footer-->
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <div class="footer" align="left">
+      <hr>
+          <footer>
+            <p>&copy; LMS- Library Management System</p>
+          </footer><hr>
+      </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Admin Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+<style>
+h2
+{
+	color: tomato;
+	text-align: center;
+}
+
+.mySlides
+{
+	display:none;
+}
+
+.footer
+{
+ text-align: center;
+ background: black;
+ color: white;
+}
+</style>
+</head>
+
+<body>
+    <form action="/admin_index" method="post">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+           <!-- <div class="navbar-header">
+              <a class="navbar-brand" href="#">WebSiteName</a>
+            </div> -->
+            <ul class="nav navbar-nav">
+              <li><a href="admin_sign_up">Sign Up</a></li>
+              <li><a href="admin_log_in">Sign In</a></li>
+            </ul>
+          </div>
+        </nav>
+		<br/>
+		<br/>
+		<br/>
+		<div class="w3-content w3-section" style="max-width:500px">
+			<img class="mySlides" src="/static/admin_theme_1.jpg" style="width:500px">
+			<img class="mySlides" src="/static/admin_theme_2.jpg" style="width:500px ">
+			<img class="mySlides" src="/static/admin_theme_3.jpg" style="width:500px ">
+			<img class="mySlides" src="/static/admin_theme_4_edited.jpg" style="width:500px ">
+			
+		</div>
+		
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}    
+			  x[myIndex-1].style.display = "block";  
+			  setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div class="footer" align="left">
+        <hr>
+            <footer>
+              <p>&copy; LMS- Library Management System</p>
+            </footer><hr>
+        </div>
+    </form>
+</body>
+</html>

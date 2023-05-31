@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Remove Book</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+<style>
+h2
+{
+	color: orange;
+	text-align: center;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+.form-select, input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+
+  border: 1px solid #fdcb6e;
+  border-radius: 8px;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ffff;
+  outline: none;
+}
+
+hr {
+  border: 2px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity:1;
+  border-radius: 50px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+.footer
+{
+ text-align: center;
+ background: black;
+ color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+    <form action="/admin_remove_book" method="post">
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+		   <!-- <div class="navbar-header">
+			  <a class="navbar-brand" href="#">WebSiteName</a>
+			</div> -->
+			<ul class="nav navbar-nav">
+			  <li><a href="admin_logged_in">Home</a></li>
+			  <li><a href="admin_avail_books">Available Books</a></li>
+			  <li><a href="admin_add_books">Add Books</a></li>
+				<li class="active"><a href="admin_remove_book">Remove Books</a></li>
+			  <li><a href="admin_issued_book">Issued Books</a></li>
+			  <li><a href="admin_user_information">User Information</a></li>
+			  <li><a href="admin_logout">Logout</a></li>
+			</ul>
+		  </div>
+		</nav>
+
+		<div class="jumbotron text-center">
+			<h2>Remove Book from the Library</h2>
+		</div>
+
+		<div>
+		  <form>
+			  <div class="container">
+
+
+				<label for="book_name"><b>Book Name</b></label>
+				<input type="text" id="book_name" name="book_name" required>
+
+				<label for="author"><b>Author</b></label>
+				<input type="text" id="author" name="author" required>
+
+				<label for="book_type"><b>Book Type</b></label>
+				<select class="form-select" id="book_type" name="book_type" required>
+					  <option>Action and Adventure</option>
+					  <option>Autobiographies and Biographies</option>
+					  <option>Classics</option>
+					  <option>Comic Book</option>
+					  <option>Cookbooks</option>
+					  <option>Detective and Mystery</option>
+					  <option>Dictionary</option>
+					  <option>Drama</option>
+					  <option>Essays</option>
+					  <option>Fantasy</option>
+					  <option>History</option>
+					  <option>Journal</option>
+					  <option>Novel</option>
+					  <option>Philosophy</option>
+					  <option>Poetry</option>
+					  <option>Religion</option>
+					  <option>Science</option>
+					  <option>Science Fiction</option>
+					  <option>Sports and Leisure</option>
+					  <option>Travel</option>
+				</select>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+
+							<button class="btn btn-danger btn-round-1">Cancel</button>
+						</div>
+
+						<div class="col-sm-6">
+							<button class="btn btn-success btn-round-1">Remove Book</button>
+						</div>
+					</div>
+				</div>
+		</form>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div class="footer" align="left">
+		<hr>
+			<footer>
+			  <p>&copy; LMS- Library Management System</p>
+			</footer><hr>
+		</div>
+	</form>
+</body>
+</html>
+
+
+
+<!--admin_remove_book-->
